@@ -3,17 +3,7 @@
 //     beforeEach(() => {
 //         cy.visit("https://academybugs.com/find-bugs/#") 
 //     })
-//     it("Validating the visibility of the header elements", () => {
-//       //header part
-//       cy.get("div .sq-site-title a").should('be.visible');
-//       cy.get("div #menu-item-5906 a").should('be.visible');
-//       cy.get("div #menu-item-1024  a").should('be.visible');
-//       cy.get("div #menu-item-561  a").should('be.visible');
-//       cy.get("div #menu-item-5687  a").should('be.visible');
-//       //heading titles
-//       cy.get("div [style='text-align: center; margin-top: .8em']").should('be.visible');
-//       cy.get("div .entry-content  h6").should('be.visible');
-//       //Cart details
+//     it("Validating the visibility of the elements on product card", () => {
 //       cy.get("div .ec_product_title_type1:first()").should('be.visible');
 //       cy.get("div .ec_price_type1:first()").should('be.visible');
 //       //Add to cart button
@@ -24,10 +14,7 @@
 //       cy.get("div .ec_plus").click();
 
 //     })
-//     describe('find-bugs UI testing positive scenario ', () => {
-//     beforeEach(() => {
-//       cy.visit('https://academybugs.com/find-bugs/#')
-//     })
+//
   
     // it('User is able to see the header', () => {
     //   cy.get("div .sq-site-title a").should("be.visible")
@@ -58,15 +45,5 @@
     //     cy.get("#ec_cart_submit_order").click();  
     //     cy.get('.example-tile-heading:contains("Not a real order")').should('be.visible');
     // })
-//     it("The user should not be able to view the appropriate number of cards based on the specified products per page (-ve)",()=>{
-// cy.get('div .ec_product_li').as('Count');
-// cy.get('@Count').then((error)=>{
-//     cy.log(error.length);
-//     cy.get(".ec_product_page_showing").should("contain",error.length);
-// })
-// cy.get(".what-we-offer-pagination-link").first().click();
-// cy.get(".ec_product_page_showing").should("not.contain",10);
-// })
 
-  // })
 

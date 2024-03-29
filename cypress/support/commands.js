@@ -8,7 +8,7 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
-//
+require('@4tw/cypress-drag-drop')
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
@@ -42,12 +42,14 @@ Cypress.Commands.add('loginApi', () => {
         })
     })
 })
-beforeEach(() => {
+
+   
+  
+
+Cypress.Commands.add('BookingId', () => { 
     cy.loginApi().then(() => {
         authToken = Cypress.env('authToken')
     })
-})
-Cypress.Commands.add('BookingId', () => { 
  cy.api({
         method: 'POST',
         url: 'https://restful-booker.herokuapp.com/booking',

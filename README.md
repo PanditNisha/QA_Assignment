@@ -131,9 +131,13 @@ npm :9.5.1\
 
 Install Docker
 
-### Steps to run
+### Steps to run docker locally 
 1. On Terminal run command - docker pull cypress/included:latest
 2. On Terminal run command - docker images
 3. docker run -it --entrypoint=cypress cypress/included:latest info
 4. docker ps -a 
 5. docker run -it -v "%cd%":/e2e -w /e2e cypress/included:latest --spec cypress/e2e/ --browser chrome
+
+### Steps to run docker
+1. Start the web application and run Cypress tests with npm run up
+

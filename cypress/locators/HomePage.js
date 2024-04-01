@@ -30,7 +30,7 @@ const priorityRadioButton ="div #priority-form-group-1 .btn-group .radio-group-w
 const dragElement =".ui-state-default:eq(0)";
 const cartQuantity = "div .ec_plus";
 const updateButton = "div .ec_cartitem_update_button"
-const errorMessage = "#popmake-4406";
+const errorMessage = "div .academy-popup-bug-title";
 const currencyDropdown = "div #ec_currency_conversion"
 const filterPrice = "div .menu_link:eq(3)"
 const signInButton = "div .ec_login_widget_button"
@@ -44,6 +44,9 @@ const pagination = ".what-we-offer-pagination-link"
 class homepage {
     static getVisit() {
         return cy.visit("https://academybugs.com/find-bugs/#");
+    }
+    static getLogo(){
+        return cy.get(logo)
     }
     static getProductTitle() {
         return cy.get(productTitle);
@@ -104,8 +107,9 @@ class homepage {
     }
     static getSubmitOrderButton() {
         return cy.get(submitOrderButton);
+
     } static getConfirmationMessageOverlay() {
-        return cy.get(`${confirmationMessageOverlay}:contains("Not a real order")`);
+        return cy.get(`${confirmationMessageOverlay}:contains("Thank you for your order")`);
     }
     static getSortField() {
         return cy.get(sortField);

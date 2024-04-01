@@ -1,0 +1,13 @@
+version: 'latest'
+services:
+  e2e:
+    entrypoint: cypress
+    image: cypress/included:latest
+    build: ./e2e
+    working_dir: /e2e
+    container_name: cypress
+    command: run
+    volumes:
+     - ./:/e2e/
+     - './:/cypress.config.js'
+
